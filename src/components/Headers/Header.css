@@ -27,10 +27,8 @@
   color: #E0E0E0;
 }
 
-/* Desktop Navigation Styles (default) */
 .desktop-nav {
   display: flex;
-  /* Show by default */
   gap: 25px;
   /* Space between links */
   align-items: center;
@@ -169,24 +167,19 @@
 
 .drawer-nav.open+.drawer-overlay {
   display: block;
-  /* Show when drawer is open */
 }
 
-/* --- Media Queries for Mobile --- */
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
-    /* Hide desktop nav on mobile */
   }
 
   .hamburger-menu {
     display: block;
-    /* Show hamburger on mobile */
   }
 
   .main-header {
     justify-content: space-between;
-    /* Ensure name and hamburger are spaced */
   }
 
   .college-name {

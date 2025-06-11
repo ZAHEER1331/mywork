@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="main-layout">
         <Header />
-        <div className="content">
+
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
@@ -24,7 +24,7 @@ function App() {
             <Route path="/admissions" element={<AdmissionsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </div>
+
         <Footer />
       </div>
     </Router>
