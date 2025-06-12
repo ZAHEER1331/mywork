@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Headers/Header";
+import ChatbotComponent from "./components/Chatbot/ChatbotComponents";
 import Footer from "./components/Footer/Footer";
 import ContactPage from "./pages/ContactPage";
 import "./styles/pages.css";
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <div className="main-layout">
         <Header />
+        <div className="content">
 
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -24,7 +26,8 @@ function App() {
             <Route path="/admissions" element={<AdmissionsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-
+        </div>
+        <ChatbotComponent />
         <Footer />
       </div>
     </Router>
