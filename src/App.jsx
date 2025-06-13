@@ -10,9 +10,27 @@ import AboutPage from "./pages/AboutPage";
 import CoursesPage from "./pages/CoursesPage";
 import AdmissionsPage from "./pages/AdmissionsPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import { useState } from "react";
+import DeveloperInfoPopup from "./components/DeveloperInfo/DeveloperInfoPopup";
 
 function App() {
+  const [showPopup, setShowPopup] = useState(true);
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
+    <>
+    <div>
+        {/* Your main application content */}
+        <DeveloperInfoPopup
+          show={showPopup}
+          onClose={handleClosePopup}
+          studentName="💎Zaheer Khalil Mujawar💎"
+          studentPhotoUrl="/images/ZAHEER1331.jpg" // Path to their photo
+          uniqueMessage="Learning OJT Web development is the art of turning ideas into digital experiences that shape the world."
+        />
+      </div>
     <Router>
       <div className="main-layout">
         <Header />
@@ -31,15 +49,17 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </>
   );
+
 }
 export default App;
 
-// import { useState, useEffect, useRef } from "react";
+{/* // import { useState, useEffect, useRef } from "react";
 // // Our Educational Organization's Knowledge Base (FAQs) - NO CHANGE HERE
 // import { getEmbeddings, cosineSimilarity } from './utils/aiService'; // <-- ADD THIS LINE
 
-// const knowledgeBase = {
+// const knowledgeBase = { */}
 //   // ... (your existing knowledgeBase object) ...
 //   greeting: {
 //     response:
